@@ -1,0 +1,60 @@
+<h3>Location</h3>
+
+<div class="form-group">
+  <label for="year" class="col-sm-2 control-label">Substation</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="event.substation" class="form-control" id="Substation" placeholder="substation name"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="director" class="col-sm-2 control-label">Feeder</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="event.feeder" class="form-control" id="Feeder" placeholder="feeder number"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="plot" class="col-sm-2 control-label">Type</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="event.type" class="form-control" id="Device Type" placeholder="Breaker, AFS, TS2, FCI"/>
+  </div>
+</div>
+<h3>Date &amp; Time</h3>
+<div class="form-group">
+  <label for="plot" class="col-sm-2 control-label">Date</label>
+  <div class="col-sm-10">
+    <input type="date" ng-model="event.date" class="form-control" id="Date" placeholder="date"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="plot" class="col-sm-2 control-label">Time</label>
+  <div class="col-sm-10">
+    <input type="time" ng-model="event.time" class="form-control" id="Time" placeholder="time"/>
+  </div>
+</div>
+<h3>Event Details</h3>
+<div class="fc" style="color:darkslateblue;">Enter <em>one or more event types</em> to consider</div>
+    <div><div class="chk" style="display:inline-block;width:275px;">Line to Ground</div> <input type="checkbox" id="fLG" name="fLG" /></div>
+    <div><div class="chk" style="display:inline-block;width:275px;">Line-Line-Ground</div> <input type="checkbox" id="fLLG" name="fLLG" /></div>
+    <div><div class="chk" style="display:inline-block;width:275px;">Line-Line</div> <input type="checkbox" id="fLL" name="fLL" /></div>
+    <div><div class="chk" style="display:inline-block;width:275px;">Three Phase</div> <input type="checkbox" id="fTP" name="fTP" /></div>
+<h3>Event Magnitude</h3>
+  <label for="plot" class="col-sm-2 control-label">A Phase</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="event.aphase" class="form-control" id="phaseA" pattern="^-?[0-9]\d*(.\d+)?$" />
+  </div>
+</div>
+  <label for="plot" class="col-sm-2 control-label">B Phase</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="event.bphase" class="form-control" id="phaseB" pattern="^-?[0-9]\d*(.\d+)?$" />
+  </div>
+</div>
+  <label for="plot" class="col-sm-2 control-label">C Phase</label>
+  <div class="col-sm-10">
+    <input type="text" ng-model="event.cphase" class="form-control" id="phaseC" pattern="^-?[0-9]\d*(.\d+)?$" />
+  </div>
+</div>
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <input type="submit" class="btn btn-primary" value="Update Event"/>
+  </div>
+</div>

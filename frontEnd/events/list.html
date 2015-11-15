@@ -1,0 +1,23 @@
+<table class="tabpdc">
+  <tr>
+    <th>Substation</th>
+    <th>Feeder</th>
+    <th>Type</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Actions</th>
+  </tr>
+  <tr ng-repeat="event in events | orderBy:'name'">
+    <td>{{event.substation}}</td>
+    <td>{{event.feeder}}</td>
+    <td>{{event.type}}</td>
+    <td>{{event.date}}</td>
+    <td>{{event.time}}</td>
+    <td>
+      <a class="btn btn-primary" ui-sref="viewEvent({id:event._id})">View</a>
+      <a class="btn btn-primary" ui-sref="editEvent({id:event._id})">Edit</a>
+      <a class="btn btn-danger"  ng-click="deleteEvent(event)">Delete</a>
+    </td>
+  </tr>
+</table>
+    <a ui-sref="newEvent" class="btn-primary btn-lg nodecoration">Add New Event</a>

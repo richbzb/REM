@@ -1,0 +1,12 @@
+Prerequisites:
+  NodeJS
+  MongoDB
+  this code (REM)
+  
+from backEnd:
+  npm install (one time)
+  node em.js
+  
+from browser:
+  localhost:3000/em.html
+  
